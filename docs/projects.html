@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Akinsanya Oluwafemi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Portfolio projects" />
+  <style>
+    :root{
+      --site-bg: #0f172a;  /* Dark blue background */
+      --card-bg: #1e293b;  /* Medium dark blue for cards */
+      --text: #646ac2;     /* Light text color */
+      --muted: #ffffff;    /* Muted text */
+      --link: #60a5fa;     /* Bright blue links */
+      --hover: #107fff;    /* Lighter blue on hover */
+      --accent: #1d4ed8;   /* Vibrant blue for accents */
+      --border: #334155;   /* Dark blue border */
+      --button-bg: #1d4ed8; /* Button background */
+    }
+    
+    /* Also update the body background class */
+    body.bg-gray-50 {
+      background-color: var(--site-bg) !important;
+      color: var(--text) !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-semibold">Akinsanya Oluwafemi</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="about.html" class="hover:text-indigo-600">About</a>
+        <a href="experience.html" class="hover:text-indigo-600">Experience</a>
+        <a href="posts.html" class="hover:text-indigo-600">Posts</a>
+        <a href="project.html" class="hover:text-indigo-600">Projects</a>
+        <a href="certifications.html" class="hover:text-indigo-600">Certifications</a>
+        <a href="index.html#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden">☰</button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+      <a href="index.html#about" class="block px-6 py-3">About</a>
+      <a href="project.html" class="block px-6 py-3">Projects</a>
+      <a href="index.html#contact" class="block px-6 py-3">Contact</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Page Header -->
+    <section class="mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
+      <p class="text-xl text-white mb-6 font-medium">Here's a collection of my cybersecurity projects, tools, and experiments. Each project represents a step in my journey to understand digital security better.</p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-6">Featured Projects</h2>
+      <div class="grid gap-8">
+        <!-- Project 1 -->
+        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/3">
+              <img src="assets/ChatGPT Image Oct 18, 2025, 09_37_02 PM.png" alt="Network Security Analyzer" class="w-full h-64 object-cover" />
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-2xl font-semibold mb-3">Network Security Analyzer</h3>
+              <p class="text-gray-600 mb-4">A Python-based tool that scans networks for vulnerabilities, analyzes traffic patterns, and identifies potential security threats in real-time.</p>
+              <div class="mb-4">
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Real-time network traffic monitoring</li>
+                  <li>Vulnerability scanning and reporting</li>
+                  <li>Customizable alert system for suspicious activities</li>
+                  <li>Detailed security assessment reports</li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-medium mb-2">Technologies Used:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Scapy</span>
+                  <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Nmap</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">SQLite</span>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-6">
+                <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded shadow hover:bg-indigo-700">View Details</a>
+                <a href="#" class="inline-block border border-gray-300 px-5 py-2 rounded hover:bg-gray-100">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="md:flex flex-row-reverse">
+            <div class="md:w-1/3">
+              <img src="assets/picture-icon.svg" alt="Password Strength Auditor" class="w-full h-64 object-cover bg-gray-200 flex items-center justify-center">
+              <div class="text-gray-500 text-center">Project Image</div>
+            </div>
+            <div class="p-6 md:w-2/3">
+              <h3 class="text-2xl font-semibold mb-3">Password Strength Auditor</h3>
+              <p class="text-gray-600 mb-4">A comprehensive tool that evaluates password policies, tests password strength, and educates users on creating secure authentication credentials.</p>
+              <div class="mb-4">
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Password complexity analysis</li>
+                  <li>Common password pattern detection</li>
+                  <li>Brute-force resistance testing</li>
+                  <li>Educational feedback for users</li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h4 class="font-medium mb-2">Technologies Used:</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                  <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Express</span>
+                  <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                </div>
+              </div>
+              <div class="flex gap-3 mt-6">
+                <a href="#" class="inline-block bg-indigo-600 text-white px-5 py-2 rounded shadow hover:bg-indigo-700">View Details</a>
+                <a href="#" class="inline-block border border-gray-300 px-5 py-2 rounded hover:bg-gray-100">GitHub Repo</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-6">All Projects</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Project card 1 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/ChatGPT Image Oct 18, 2025, 09_37_02 PM.png" alt="project 1" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">Network Security Analyzer</h3>
+            <p class="text-sm text-gray-600 mt-2">Python tool for network vulnerability scanning and traffic analysis.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2025</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/picture-icon.svg" alt="project 2" class="w-full h-40 object-cover bg-gray-200 flex items-center justify-center" />
+          <div class="p-4">
+            <h3 class="font-semibold">Password Strength Auditor</h3>
+            <p class="text-sm text-gray-600 mt-2">Tool for evaluating password policies and testing credential security.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 3 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/picture-icon.svg" alt="project 3" class="w-full h-40 object-cover bg-gray-200 flex items-center justify-center" />
+          <div class="p-4">
+            <h3 class="font-semibold">Phishing Detection System</h3>
+            <p class="text-sm text-gray-600 mt-2">Machine learning model to identify and flag phishing websites.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 4 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/picture-icon.svg" alt="project 4" class="w-full h-40 object-cover bg-gray-200 flex items-center justify-center" />
+          <div class="p-4">
+            <h3 class="font-semibold">Encrypted File Transfer</h3>
+            <p class="text-sm text-gray-600 mt-2">Secure file sharing application with end-to-end encryption.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2023</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 5 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/picture-icon.svg" alt="project 5" class="w-full h-40 object-cover bg-gray-200 flex items-center justify-center" />
+          <div class="p-4">
+            <h3 class="font-semibold">Log Analysis Dashboard</h3>
+            <p class="text-sm text-gray-600 mt-2">Web interface for analyzing and visualizing security logs.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2023</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card 6 -->
+        <article class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+          <img src="assets/picture-icon.svg" alt="project 6" class="w-full h-40 object-cover bg-gray-200 flex items-center justify-center" />
+          <div class="p-4">
+            <h3 class="font-semibold">Security Awareness Training</h3>
+            <p class="text-sm text-gray-600 mt-2">Interactive platform for cybersecurity education and training.</p>
+            <div class="mt-4 flex items-center justify-between text-sm text-indigo-600">
+              <a href="#" class="underline">View</a>
+              <span class="text-gray-400">•</span>
+              <span class="text-gray-500">2022</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-white rounded-lg p-8 shadow-sm text-center">
+      <h2 class="text-2xl font-semibold mb-4">Have a project in mind?</h2>
+      <p class="text-gray-600 mb-6 max-w-2xl mx-auto">I'm always interested in new challenges and collaborations. Whether you need cybersecurity consultation or want to discuss a potential project, let's connect!</p>
+      <a href="index.html#contact" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded shadow hover:bg-indigo-700">Get In Touch</a>
+    </section>
+  </main>
+
+  <footer class="mt-10 text-center text-sm text-gray-500">© Akinsanya Oluwafemi — Built with ❤️</footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
