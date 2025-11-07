@@ -7,34 +7,90 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --site-bg: #252a34;
-      --card-bg: rgba(83, 84, 86, 0.8);
-      --text: #eaeaea;
-      --muted: #a0a0a0;
-      --link: #73b4d5;
-      --hover: #8fc7e3;
-      --accent: #73b4d5;
-      --border: #5c5e5f;
-      --button-bg: #73b4d5;
+      --site-bg: #0f172a;  /* Dark blue background */
+      --card-bg: #1e293b;  /* Medium dark blue for cards */
+      --text: #e2e8f0;     /* Light text color */
+      --muted: #cbd5e1;    /* Muted text */
+      --link: #60a5fa;     /* Bright blue links */
+      --hover: #107fff;    /* Lighter blue on hover */
+      --accent: #1d4ed8;   /* Vibrant blue for accents */
+      --border: #334155;   /* Dark blue border */
+      --button-bg: #1d4ed8; /* Button background */
     }
-    html,body{background:var(--site-bg);color:var(--text);}
-    a{color:var(--link);transition:all 0.3s ease;}
-    a:hover{color:var(--hover) !important;}
-    .bg-white{background-color:var(--card-bg) !important;color:inherit !important}
-    input,textarea,select,button{background:transparent !important;color:var(--text) !important;border-color:var(--border) !important}
-    .shadow,.shadow-sm,.shadow-lg{box-shadow:0 4px 6px rgba(0,0,0,0.1) !important}
-    header, footer{background:transparent}
-    .text-gray-500, .text-gray-600{color:var(--muted) !important;}
+    
+    /* Body and text styling */
+    body.bg-gray-50 {
+      background-color: var(--site-bg) !important;
+      color: var(--text) !important;
+    }
+    
+    .bg-white {
+      background-color: var(--card-bg) !important;
+      color: var(--text) !important;
+    }
+    
+    .text-gray-800 {
+      color: var(--text) !important;
+    }
+    
+    .text-gray-600 {
+      color: var(--muted) !important;
+    }
+    
+    .text-gray-500 {
+      color: var(--muted) !important;
+    }
+    
+    .hover\:text-indigo-600:hover {
+      color: var(--hover) !important;
+    }
+    
+    /* Shadow styling */
+    .shadow, .shadow-sm, .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .hover\:shadow-xl:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Link styling */
+    a {
+      color: var(--link);
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      color: var(--hover) !important;
+    }
+    
+    /* Form elements */
+    input, textarea, select, button {
+      background: transparent !important;
+      color: var(--text) !important;
+      border-color: var(--border) !important;
+    }
+    
+    header, footer {
+      background: transparent;
+    }
     
     /* Blog post specific styles */
     .post-content {
       max-width: 768px;
       margin: 0 auto;
     }
+    
     .post-content p {
       margin-bottom: 1.5rem;
       line-height: 1.8;
+      color: var(--text);
     }
+    
+    .post-content h1, .post-content h2, .post-content h3 {
+      color: var(--text) !important;
+    }
+    
     .post-content h2 {
       font-size: 1.5rem;
       font-weight: 600;
@@ -42,27 +98,57 @@
       margin-bottom: 1rem;
       color: var(--text) !important;
     }
+    
     .post-content img {
       border-radius: 0.5rem;
       margin: 2rem 0;
       width: 100%;
       max-width: 100%;
       height: auto;
+      border: 1px solid var(--border);
     }
+    
     .post-content ul {
       margin: 1.5rem 0;
       padding-left: 1.5rem;
       list-style-type: disc;
     }
+    
     .post-content li {
       margin-bottom: 0.5rem;
+      color: var(--text);
     }
+    
     .code-block {
-      background: rgba(0,0,0,0.2);
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--border);
       padding: 1rem;
       border-radius: 0.5rem;
       margin: 1.5rem 0;
       overflow-x: auto;
+      color: var(--muted);
+    }
+    
+    .code-block pre {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+    }
+    
+    /* Tag styling */
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background-color: rgba(29, 78, 216, 0.2);
+      color: var(--link);
+      border-radius: 1rem;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Border styling */
+    .border-gray-700 {
+      border-color: var(--border) !important;
     }
   </style>
 </head>
@@ -84,25 +170,24 @@
     <article class="post-content">
       <!-- Post Header -->
       <header class="mb-8">
-        <h1 class="text-4xl font-bold mb-4">Setting Up a Security Lab Environment</h1>
+        <h1 class="text-4xl font-bold mb-4 text-white">Setting Up a Security Lab Environment</h1>
         <div class="flex items-center gap-4 text-gray-500 mb-6">
           <time>October 15, 2025</time>
           <span>•</span>
           <span>Lab Setup</span>
         </div>
-        <img src="../assets/sample-project1.jpg" alt="Security Lab Setup" class="w-full h-[400px] object-cover rounded-lg shadow-lg" />
+        <img src="../../assets/layout sketch.png" alt="Security Lab Setup" class="w-full h-[400px] object-cover rounded-lg shadow-lg" />
       </header>
 
       <!-- Post Content -->
       <div class="prose prose-lg">
-        <p>Setting up a proper security lab environment is crucial for learning and practicing cybersecurity concepts safely. In this guide, I'll walk you through creating a secure and isolated virtual lab environment.</p>
-
+        <p>Do you know that my PC froze while i was working on my VMs and do you know why that happened? basically it was due to the fact that i had too many VMs running at the same time which was about 4 machines simultaneously ,Funny right? i learnt immediately that the amount of vms you can run the same time is directly linked to how powerful your host pc is. </p>
+        </p>So come along as i walk you through the world of virtualization for the interesting Cybersecurity Domain</p>
         <h2>Required Components</h2>
         <ul>
           <li>Virtualization software (VMware or VirtualBox)</li>
           <li>Operating systems ISOs</li>
-          <li>Network configuration tools</li>
-          <li>Security testing tools</li>
+          <li>Your host machine</li>
         </ul>
 
         <h2>Step 1: Setting Up Virtual Machines</h2>
@@ -118,7 +203,25 @@
 
         <img src="../assets/vm-setup.jpg" alt="VM Setup Screenshot" class="my-8 rounded-lg shadow-lg" />
 
-        <!-- Add more sections as needed -->
+        <h2>Step 2: Network Configuration</h2>
+        <p>Proper network isolation is critical for security labs. We'll set up a host-only network to ensure our lab environment doesn't interact with our main network.</p>
+        
+        <div class="code-block">
+          <pre>Network Settings:
+- Adapter Type: Host-only
+- IP Range: 192.168.56.0/24
+- DHCP: Disabled (static IP assignment)
+- Promiscuous Mode: Allow All</pre>
+        </div>
+
+        <h2>Step 3: Installing Security Tools</h2>
+        <p>Now we'll install essential security tools for our lab:</p>
+        <ul>
+          <li>Kali Linux - For penetration testing</li>
+          <li>Metasploitable - Vulnerable VM for practice</li>
+          <li>Wireshark - Network protocol analyzer</li>
+          <li>Nmap - Network discovery and security auditing</li>
+        </ul>
 
         <h2>Security Considerations</h2>
         <p>Remember to keep your lab environment isolated from your main network. Here are some key security measures:</p>
@@ -127,17 +230,29 @@
           <li>Disable shared folders when not needed</li>
           <li>Regular snapshots for recovery</li>
           <li>Strong passwords for all VMs</li>
+          <li>Regular updates for all systems</li>
+          <li>Firewall configuration</li>
         </ul>
 
-        <!-- Add more content sections -->
+        <h2>Best Practices</h2>
+        <p>To maintain an effective and secure lab environment:</p>
+        <ul>
+          <li>Document your lab setup and configurations</li>
+          <li>Keep separate user accounts for lab activities</li>
+          <li>Regularly backup important configurations</li>
+          <li>Test new tools in isolated environments first</li>
+          <li>Stay updated with security patches</li>
+        </ul>
       </div>
 
       <!-- Post Footer -->
       <footer class="mt-12 pt-6 border-t border-gray-700">
         <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 text-sm rounded-full bg-opacity-20 text-accent" style="background-color: var(--card-bg)">Lab Setup</span>
-          <span class="px-3 py-1 text-sm rounded-full bg-opacity-20 text-accent" style="background-color: var(--card-bg)">Virtual Machines</span>
-          <span class="px-3 py-1 text-sm rounded-full bg-opacity-20 text-accent" style="background-color: var(--card-bg)">Security</span>
+          <span class="tag">Lab Setup</span>
+          <span class="tag">Virtual Machines</span>
+          <span class="tag">Security</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Networking</span>
         </div>
       </footer>
     </article>

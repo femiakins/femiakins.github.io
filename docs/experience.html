@@ -7,19 +7,52 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
-      --site-bg: #061324;
-      --card-bg: rgba(10,20,40,0.65);
-      --text: #e6eef8;
-      --muted: #9fb7c8;
-      --link: #7dd3fc;
-      --border: rgba(255,255,255,0.08);
+      --site-bg: #0f172a;  /* Dark blue background */
+      --card-bg: #ffffff;  /* Medium dark blue for cards */
+      --text: #646ac2;     /* Light text color */
+      --muted: #a9a8a8fa;    /* Muted text */
+      --link: #60a5fa;     /* Bright blue links */
+      --hover: #107fff;    /* Lighter blue on hover */
+      --accent: #1d4ed8;   /* Vibrant blue for accents */
+      --border: #334155;   /* Dark blue border */
+      --button-bg: #1d4ed8; /* Button background */
     }
-    html,body{background:var(--site-bg);color:var(--text);}
-    a{color:var(--link);}
-    .bg-white{background-color:var(--card-bg) !important;color:inherit !important}
-    input,textarea,select,button{background:transparent !important;color:var(--text) !important;border-color:var(--border) !important}
-    .shadow,.shadow-sm,.shadow-lg{box-shadow:0 8px 24px rgba(2,6,23,0.6) !important}
-    header, footer{background:transparent}
+    
+    /* Also update the body background class */
+    body.bg-gray-50 {
+      background-color: var(--site-bg) !important;
+      color: var(--text) !important;
+    }
+    
+    /* Additional styles to match the certifications page */
+    .bg-white {
+      background-color: var(--card-bg) !important;
+      color: var(--text) !important;
+    }
+    
+    .text-gray-800 {
+      color: var(--text) !important;
+    }
+    
+    .text-gray-600 {
+      color: var(--muted) !important;
+    }
+    
+    .text-gray-500 {
+      color: var(--muted) !important;
+    }
+    
+    .hover\:text-indigo-600:hover {
+      color: var(--hover) !important;
+    }
+    
+    .shadow, .shadow-lg {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .hover\:shadow-xl:hover {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -28,39 +61,36 @@
   <a class="sr-only" href="#footer">Skip to footer</a>
   <header id="primary-nav" class="bg-white shadow">
     <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="text-xl font-semibold">Akinsanya Oluwafemi</a>
+  <a href="../index.html" class="text-xl font-semibold">Akinsanya Oluwafemi</a>
       <nav class="hidden md:flex gap-6 text-sm">
-
-      </nav>
-        <a href="index.html#about" class="hover:text-indigo-600">About</a>
+        <a href="about.html" class="hover:text-indigo-600">About</a>
         <a href="experience.html" class="hover:text-indigo-600">Experience</a>
         <a href="posts.html" class="hover:text-indigo-600">Posts</a>
+        <a href="projects.html" class="hover:text-indigo-600">Projects</a>
         <a href="certifications.html" class="hover:text-indigo-600">Certifications</a>
-        <a href="index.html#contact" class="hover:text-indigo-600">Contact</a>
+        <a href="contact.html" class="hover:text-indigo-600">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="max-w-5xl mx-auto px-6 py-12">
-    <article class="prose">
-      <h1 class="text-3xl font-bold mb-4">Experience</h1>
-      <p class="text-gray-600 mb-6">Welcome to my Professional Experience Showcase</p>
+    <h1 class="text-3xl font-bold mb-4 text-white">Experience</h1>
+    <p class="text-white mb-6">Welcome to my Professional Experience Showcase</p>
 
-      <section class="grid gap-6">
-        <article class="bg-white p-6 rounded shadow">
-          <header class="flex items-start gap-4">
-            <img src="assets/picture-icon.svg" alt="placeholder" class="w-20 h-20 object-cover rounded" />
-            <div>
-              <h2 class="font-semibold"> MCSI REMOTE CYBERSECURITY INTERNSHIP</h2>
-              <p class="text-sm text-gray-500">INTERN • 2025</p>
-            </div>
-          </header>
-          <p class="text-sm text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </article>
-      </section>
-    </article>
+    <section class="grid gap-6">
+      <a href="experience-detail/mcsi-cybersecurity-internship.html" class="block">
+        <div class="bg-white p-6 rounded shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center gap-6">
+          <img src="../assets/mosse logo.png" alt="assets\logo-title-with-triangle.svg" class="w-24 h-24 object-cover rounded" />
+          <div>
+            <h3 class="text-xl font-semibold mb-2">MCSI Remote Cybersecurity Internship</h3>
+            <p class="text-sm text-gray-500 mb-2">INTERN • 2025</p>
+            <p class="text-gray-600">Have a look at all the numerous experiences I had at MCSI</p>
+          </div>
+        </div>
+      </a>
+    </section>
 
-    <footer id="footer" class="mt-10 text-center text-sm text-gray-500">© Lorem Ipsum — Built with ❤️</footer>
+    <footer id="footer" class="mt-10 text-center text-sm text-gray-500">© Akinsanya Oluwafemi — Built with ❤️</footer>
   </main>
 </body>
 </html>
